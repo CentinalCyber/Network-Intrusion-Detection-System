@@ -32,4 +32,9 @@ In another terminal, simulate an "attack" by pinging the Pi’s IP:
 
 When the Pi detects the ping, the buzzer will sound briefly and the LED will light up and blink, alerting you of the "intrusion."
 
+📷 Project Setup
+
+![NIDS Setup](NIDS.jpg)
+
+
 
