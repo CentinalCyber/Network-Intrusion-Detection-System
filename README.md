@@ -1,38 +1,35 @@
 # Network-Intrusion-Detection-System
-Python based network intrusion detection system using Suricata and Raspberry Pi with real-time physical alerts
+Python based network intrusion detection system using Raspberry Pi with real-time physical alerts
 
 
-# Raspberry Pi Network Intrusion Detection System (NIDS)
+📡 Raspberry Pi Network Intrusion Detection Simulation (Ping-Based Alert System)
+This project simulates a basic network intrusion detection system (NIDS) using a Raspberry Pi, Python, and GPIO components (LED + buzzer). When the Raspberry Pi receives a network ping (ICMP request), it treats it as a simulated attack. The system then triggers an audible and visual alert using a buzzer and an LED.
 
-This project uses a **Raspberry Pi 4**, **Suricata**, and a **Freenove Super Starter Kit** to create a Network Intrusion Detection System (NIDS). When a Suricata alert is triggered, the system activates a **buzzer** and **LED** to indicate potential malicious traffic.
+🛠️ Key Features
+Detects incoming ping requests as simulated "network attacks"
 
-## 🔧 Hardware Used
-- Raspberry Pi 4 Model B
-- LED
-- Buzzer
-- Jumper wires
+Sounds a buzzer briefly and activates an LED alert
 
-## 🛠️ Software & Tools
-- **Suricata**: Open-source intrusion detection engine
-- **Python**
-- **RPi.GPIO** and **time** libraries
+LED stays on for 3 seconds, then blinks for 10 seconds
 
-## 📷 Project Setup
+Fully resets and waits for the next detection
 
-![NIDS Setup](NIDS.Photo.png)
 
-## 🧠 How It Works
-- Suricata monitors network traffic and generates alerts
-- A Python script constantly checks the alert file
-- If an alert is detected, it triggers a **buzzer** and **LED**
+🧠 What This Project Demonstrates
+This system is designed to bridge cybersecurity concepts and physical hardware. While not using deep packet inspection or real intrusion detection software like Suricata, it introduces core ideas such as:
 
-## 🗂️ Files
-- `nids_alert_system.py`: Main Python script monitoring Suricata and triggering hardware alerts
-- `NIDS.Photo.png`: Image of the Raspberry Pi setup (optional)
+Simulating threat detection
 
-## 🚀 How to Run
-Install required libraries:
-```bash
-pip install RPi.GPIO
+Using GPIO to trigger physical responses
+
+Creating event-driven logic for network activity
+
+🖥️ How to Use It
+Run the Python script on your Raspberry Pi.
+In another terminal, simulate an "attack" by pinging the Pi’s IP:
+
+'ping [Raspberry Pi IP]'
+
+When the Pi detects the ping, the buzzer will sound briefly and the LED will light up and blink, alerting you of the "intrusion."
 
 
